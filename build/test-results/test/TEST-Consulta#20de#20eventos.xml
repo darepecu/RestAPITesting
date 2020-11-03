@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Consulta de eventos" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-03T19:07:04" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="0.286">
+<testsuite name="Consulta de eventos" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-03T22:14:35" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="0.314">
   <properties/>
-  <testcase name="Consultar eventos" classname="Consulta de eventos" time="0.286"/>
+  <testcase name="Consultar eventos" classname="Consulta de eventos" time="0.314"/>
   <system-out><![CDATA[
 Escenario: Consultar eventos                             ?[90m# src/test/resources/features/get/GetItems.feature:5?[0m
-14:07:04.965 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/get/GetItems.feature
-14:07:04.967 [Test worker] INFO   - 
+17:14:35.286 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/get/GetItems.feature
+17:14:35.287 [Test worker] INFO   - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
   | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
@@ -29,7 +29,7 @@ Multiparts:		<none>
 Body:			<none>
   ?[32mCuando ?[0m?[32mJuan envíe la petición de consulta?[0m              ?[90m# steps.StepDefinitions.juan_envíe_la_petición_de_consulta()?[0m
   ?[32mEntonces ?[0m?[32mse muestan los eventos creados?[0m                ?[90m# steps.StepDefinitions.se_muestan_los_eventos_creados()?[0m
-14:07:05.248 [Test worker] INFO   - ?[92m
+17:14:35.596 [Test worker] INFO   - ?[92m
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
   _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
  (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
