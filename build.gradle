@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations.all {
+    resolutionStrategy {
+        force "io.cucumber:cucumber-core:4.2.0"
+    }
+}
+
+dependencies {
+
+    testCompile "net.serenity-bdd:serenity-core:2.0.64",
+            "net.serenity-bdd:serenity-cucumber4:1.0.19",
+            "io.cucumber:cucumber-core:4.2.0",
+            "io.cucumber:cucumber-junit:4.2.0"
+
+    // Other dependencies
+    testCompile "org.slf4j:slf4j-api:1.7.5",
+            "junit:junit:4.12",
+            "org.assertj:assertj-core:1.7.0"
+
+    testImplementation 'io.rest-assured:rest-assured:4.3.1'
+    testImplementation 'io.rest-assured:json-path:4.3.1'
+    testImplementation 'io.rest-assured:json-schema-validator:4.3.1'
+}
