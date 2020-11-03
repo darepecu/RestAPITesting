@@ -1,12 +1,13 @@
 package steps;
 
-import cucumber.api.java.es.Cuando;
-import cucumber.api.java.es.Dado;
-import cucumber.api.java.es.Entonces;
-import io.restassured.RestAssured;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Entonces;
 import io.restassured.response.Response;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.thucydides.core.util.EnvironmentVariables;
+
+import static io.restassured.RestAssured.given;
 
 public class StepDefinitions {
 
@@ -22,18 +23,18 @@ public class StepDefinitions {
 
         String webServicesEndpoint = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("base");
 
-        Response response = RestAssured.given()
-                .body("{\"name\":\"empleado de Juan\",\"salary\":\"123\",\"age\":\"23\"}")
-                .post(webServicesEndpoint+"create");
+       test test = new test();
 
-        response.prettyPrint();
+       test.testing(webServicesEndpoint+"create");
+
+        //response.prettyPrint();
 
     }
 
     @Entonces("se crea el evento")
     public void se_crea_el_evento() {
         // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
     }
 
     @Dado("que Juan como usuario desea consultar los eventos")
@@ -45,15 +46,16 @@ public class StepDefinitions {
     public void juan_envíe_la_petición_de_consulta() {
         String webServicesEndpoint = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("base");
 
-        Response response = RestAssured.given()
+        Response response = given()
+                .log().all()
                 .get(webServicesEndpoint+"employees");
 
-        response.prettyPrint();
+        //response.prettyPrint();
     }
 
     @Entonces("se muestan los eventos creados")
     public void se_muestan_los_eventos_creados() {
         // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+
     }
 }

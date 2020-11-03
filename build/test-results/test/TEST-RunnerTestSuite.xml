@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="RunnerTestSuite" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="0.0">
   <properties/>
-  <system-out><![CDATA[Característica: Crear evento
+  <system-out><![CDATA[14:07:02.277 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/create/CreateItem.feature
+14:07:02.502 [Test worker] INFO   - ?[96m
 
-  Escenario: Crear Evento de X cosa                  ?[90m# src/test/resources/features/create/CreateItem.feature:5?[0m
-    ?[32mDado ?[0m?[32mque Juan como usuario desea crear un evento?[0m ?[90m# StepDefinitions.que_Juan_como_usuario_desea_crear_un_evento()?[0m
-    ?[32mCuando ?[0m?[32mEnvíe la información correcta?[0m             ?[90m# StepDefinitions.envíe_la_información_correcta()?[0m
-    ?[33mEntonces ?[0m?[33mse crea el evento?[0m                       ?[90m# StepDefinitions.se_crea_el_evento()?[0m
-      ?[33mcucumber.api.PendingException: TODO: implement me
-	at steps.StepDefinitions.se_crea_el_evento(StepDefinitions.java:36)
-	at ✽.se crea el evento(src/test/resources/features/create/CreateItem.feature:8)
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
 ?[0m
+14:07:02.505 [Test worker] INFO   - Test Suite Started: Crear evento
+14:07:02.522 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/get/GetItems.feature
+14:07:02.525 [Test worker] INFO   - Test Suite Started: Consulta de eventos
 
-Característica: Consulta de eventos
+2 Scenarios (?[32m2 passed?[0m)
+6 Steps (?[32m6 passed?[0m)
+0m2,977s
 
-  Escenario: Consultar eventos                             ?[90m# src/test/resources/features/get/GetItems.feature:5?[0m
-    ?[32mDado ?[0m?[32mque Juan como usuario desea consultar los eventos?[0m ?[90m# StepDefinitions.que_Juan_como_usuario_desea_consultar_los_eventos()?[0m
-    ?[32mCuando ?[0m?[32mJuan envíe la petición de consulta?[0m              ?[90m# StepDefinitions.juan_envíe_la_petición_de_consulta()?[0m
-    ?[33mEntonces ?[0m?[33mse muestan los eventos creados?[0m                ?[90m# StepDefinitions.se_muestan_los_eventos_creados()?[0m
-      ?[33mcucumber.api.PendingException: TODO: implement me
-	at steps.StepDefinitions.se_muestan_los_eventos_creados(StepDefinitions.java:57)
-	at ✽.se muestan los eventos creados(src/test/resources/features/get/GetItems.feature:8)
-?[0m
-
-?[33mPending scenarios:?[0m
-?[33msrc/test/resources/features/create/CreateItem.feature:5 ?[0m# Crear Evento de X cosa
-?[33msrc/test/resources/features/get/GetItems.feature:5 ?[0m# Consultar eventos
-
-2 Scenarios (?[33m2 pending?[0m)
-6 Steps (?[33m2 pending?[0m, ?[32m4 passed?[0m)
-0m2,678s
-
-cucumber.api.PendingException: TODO: implement me
-	at steps.StepDefinitions.se_crea_el_evento(StepDefinitions.java:36)
-	at ✽.se crea el evento(src/test/resources/features/create/CreateItem.feature:8)
-
-cucumber.api.PendingException: TODO: implement me
-	at steps.StepDefinitions.se_muestan_los_eventos_creados(StepDefinitions.java:57)
-	at ✽.se muestan los eventos creados(src/test/resources/features/get/GetItems.feature:8)
 
 ]]></system-out>
-  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Crear evento" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-11-03T01:26:19" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="2.174">
+<testsuite name="Crear evento" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-03T19:07:02" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="2.436">
   <properties/>
-  <testcase name="Crear Evento de X cosa" classname="Crear evento" time="2.174">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[Vamos a Crear un Empleado
+  <testcase name="Crear Evento de X cosa" classname="Crear evento" time="2.436"/>
+  <system-out><![CDATA[
+Escenario: Crear Evento de X cosa                  ?[90m# src/test/resources/features/create/CreateItem.feature:5?[0m
+14:07:02.619 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/create/CreateItem.feature
+14:07:02.704 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Crear Evento de X cosa(crear-evento;crear-evento-de-x-cosa)
+-------------------------------------------------------------------
+Vamos a Crear un Empleado
+  ?[32mDado ?[0m?[32mque Juan como usuario desea crear un evento?[0m ?[90m# steps.StepDefinitions.que_Juan_como_usuario_desea_crear_un_evento()?[0m
+Request method:	POST
+Request URI:	http://dummy.restapiexample.com/api/v1/create
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
 {
-    "status": "success",
-    "data": {
-        "id": 2804
-    },
-    "message": "Successfully! Record has been added."
+    "name": "empleado de Juan",
+    "salary": "123",
+    "age": "23"
 }
+  ?[32mCuando ?[0m?[32mEnvíe la información correcta?[0m             ?[90m# steps.StepDefinitions.envíe_la_información_correcta()?[0m
+  ?[32mEntonces ?[0m?[32mse crea el evento?[0m                       ?[90m# steps.StepDefinitions.se_crea_el_evento()?[0m
+14:07:04.958 [Test worker] INFO   - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Crear Evento de X cosa
+----------------------------------------------------------------------------?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

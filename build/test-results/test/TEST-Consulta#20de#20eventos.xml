@@ -1,183 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Consulta de eventos" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-11-03T01:26:22" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="0.272">
+<testsuite name="Consulta de eventos" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-03T19:07:04" hostname="ip-192-168-1-51.us-east-2.compute.internal" time="0.286">
   <properties/>
-  <testcase name="Consultar eventos" classname="Consulta de eventos" time="0.272">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[Vamos a Consultar los empleados
-{
-    "status": "success",
-    "data": [
-        {
-            "id": "1",
-            "employee_name": "Tiger Nixon",
-            "employee_salary": "320800",
-            "employee_age": "61",
-            "profile_image": ""
-        },
-        {
-            "id": "2",
-            "employee_name": "Garrett Winters",
-            "employee_salary": "170750",
-            "employee_age": "63",
-            "profile_image": ""
-        },
-        {
-            "id": "3",
-            "employee_name": "Ashton Cox",
-            "employee_salary": "86000",
-            "employee_age": "66",
-            "profile_image": ""
-        },
-        {
-            "id": "4",
-            "employee_name": "Cedric Kelly",
-            "employee_salary": "433060",
-            "employee_age": "22",
-            "profile_image": ""
-        },
-        {
-            "id": "5",
-            "employee_name": "Airi Satou",
-            "employee_salary": "162700",
-            "employee_age": "33",
-            "profile_image": ""
-        },
-        {
-            "id": "6",
-            "employee_name": "Brielle Williamson",
-            "employee_salary": "372000",
-            "employee_age": "61",
-            "profile_image": ""
-        },
-        {
-            "id": "7",
-            "employee_name": "Herrod Chandler",
-            "employee_salary": "137500",
-            "employee_age": "59",
-            "profile_image": ""
-        },
-        {
-            "id": "8",
-            "employee_name": "Rhona Davidson",
-            "employee_salary": "327900",
-            "employee_age": "55",
-            "profile_image": ""
-        },
-        {
-            "id": "9",
-            "employee_name": "Colleen Hurst",
-            "employee_salary": "205500",
-            "employee_age": "39",
-            "profile_image": ""
-        },
-        {
-            "id": "10",
-            "employee_name": "Sonya Frost",
-            "employee_salary": "103600",
-            "employee_age": "23",
-            "profile_image": ""
-        },
-        {
-            "id": "11",
-            "employee_name": "Jena Gaines",
-            "employee_salary": "90560",
-            "employee_age": "30",
-            "profile_image": ""
-        },
-        {
-            "id": "12",
-            "employee_name": "Quinn Flynn",
-            "employee_salary": "342000",
-            "employee_age": "22",
-            "profile_image": ""
-        },
-        {
-            "id": "13",
-            "employee_name": "Charde Marshall",
-            "employee_salary": "470600",
-            "employee_age": "36",
-            "profile_image": ""
-        },
-        {
-            "id": "14",
-            "employee_name": "Haley Kennedy",
-            "employee_salary": "313500",
-            "employee_age": "43",
-            "profile_image": ""
-        },
-        {
-            "id": "15",
-            "employee_name": "Tatyana Fitzpatrick",
-            "employee_salary": "385750",
-            "employee_age": "19",
-            "profile_image": ""
-        },
-        {
-            "id": "16",
-            "employee_name": "Michael Silva",
-            "employee_salary": "198500",
-            "employee_age": "66",
-            "profile_image": ""
-        },
-        {
-            "id": "17",
-            "employee_name": "Paul Byrd",
-            "employee_salary": "725000",
-            "employee_age": "64",
-            "profile_image": ""
-        },
-        {
-            "id": "18",
-            "employee_name": "Gloria Little",
-            "employee_salary": "237500",
-            "employee_age": "59",
-            "profile_image": ""
-        },
-        {
-            "id": "19",
-            "employee_name": "Bradley Greer",
-            "employee_salary": "132000",
-            "employee_age": "41",
-            "profile_image": ""
-        },
-        {
-            "id": "20",
-            "employee_name": "Dai Rios",
-            "employee_salary": "217500",
-            "employee_age": "35",
-            "profile_image": ""
-        },
-        {
-            "id": "21",
-            "employee_name": "Jenette Caldwell",
-            "employee_salary": "345000",
-            "employee_age": "30",
-            "profile_image": ""
-        },
-        {
-            "id": "22",
-            "employee_name": "Yuri Berry",
-            "employee_salary": "675000",
-            "employee_age": "40",
-            "profile_image": ""
-        },
-        {
-            "id": "23",
-            "employee_name": "Caesar Vance",
-            "employee_salary": "106450",
-            "employee_age": "21",
-            "profile_image": ""
-        },
-        {
-            "id": "24",
-            "employee_name": "Doris Wilder",
-            "employee_salary": "85600",
-            "employee_age": "23",
-            "profile_image": ""
-        }
-    ]
-}
+  <testcase name="Consultar eventos" classname="Consulta de eventos" time="0.286"/>
+  <system-out><![CDATA[
+Escenario: Consultar eventos                             ?[90m# src/test/resources/features/get/GetItems.feature:5?[0m
+14:07:04.965 [Test worker] INFO  i.c.core.plugin.SerenityReporter - Running feature from file:///Users/david.pena/Documents/Github/RestAPITesting/src/test/resources/features/get/GetItems.feature
+14:07:04.967 [Test worker] INFO   - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Consultar eventos(consulta-de-eventos;consultar-eventos)
+-------------------------------------------------------------------
+Vamos a Consultar los empleados
+  ?[32mDado ?[0m?[32mque Juan como usuario desea consultar los eventos?[0m ?[90m# steps.StepDefinitions.que_Juan_como_usuario_desea_consultar_los_eventos()?[0m
+Request method:	GET
+Request URI:	http://dummy.restapiexample.com/api/v1/employees
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+  ?[32mCuando ?[0m?[32mJuan envíe la petición de consulta?[0m              ?[90m# steps.StepDefinitions.juan_envíe_la_petición_de_consulta()?[0m
+  ?[32mEntonces ?[0m?[32mse muestan los eventos creados?[0m                ?[90m# steps.StepDefinitions.se_muestan_los_eventos_creados()?[0m
+14:07:05.248 [Test worker] INFO   - ?[92m
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Consultar eventos
+----------------------------------------------------------------------------?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
