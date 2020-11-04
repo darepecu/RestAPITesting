@@ -1,19 +1,45 @@
 package steps;
 
-import io.restassured.response.Response;
-import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
-import net.thucydides.core.util.EnvironmentVariables;
 
-import static io.restassured.RestAssured.given;
+import io.restassured.response.Response;
+import models.aggregates.Age;
+import models.aggregates.Name;
+import models.aggregates.Salary;
+import models.payloads.Employee;
+
+import net.serenitybdd.rest.SerenityRest;
+
 
 public class test {
 
     public void testing(String endPoint){
 
-        Response response = given()
+        Age age = Age.builder()
+                .age("10")
+                .build();
+
+        Name name = Name.builder()
+                .name("Employeeeeeee")
+                .build();
+
+        Salary salary = Salary.builder()
+                .salary("1234567890")
+                .build();
+
+        Employee employee = Employee.builder()
+                .name(name)
+                .salary(salary)
+                .age(age)
+                .build();
+
+
+        Response response = SerenityRest.given()
                 .log().all()
                 .contentType("application/json")
-                .body("{\"name\":\"empleado de Juan\",\"salary\":\"123\",\"age\":\"23\"}")
+                .body(employee)
                 .post(endPoint);
+
+        response.prettyPrint();
+
     }
 }
