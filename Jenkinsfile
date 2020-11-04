@@ -3,7 +3,7 @@ pipeline {
 
     parameters {
         choice(name: 'Enviroment',
-        choices: 'dev\nstg\nprd',
+        choices: 'stg\nprd',
         description: 'Ambiente donde se correran las pruebas.')
     }
 

@@ -1,0 +1,921 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": [
+    "html_attributions",
+    "next_page_token",
+    "results",
+    "status"
+  ],
+  "properties": {
+    "html_attributions": {
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+      }
+    },
+    "next_page_token": {
+      "type": "string"
+    },
+    "results": {
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "required": [
+              "business_status",
+              "formatted_address",
+              "geometry",
+              "icon",
+              "name",
+              "opening_hours",
+              "photos",
+              "place_id",
+              "plus_code",
+              "price_level",
+              "rating",
+              "reference",
+              "types",
+              "user_ratings_total"
+            ],
+            "properties": {
+              "business_status": {
+                "type": "string"
+              },
+              "formatted_address": {
+                "type": "string"
+              },
+              "geometry": {
+                "type": "object",
+                "required": [
+                  "location",
+                  "viewport"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewport": {
+                    "type": "object",
+                    "required": [
+                      "northeast",
+                      "southwest"
+                    ],
+                    "properties": {
+                      "northeast": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "southwest": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "opening_hours": {
+                "type": "object",
+                "required": [
+                  "open_now"
+                ],
+                "properties": {
+                  "open_now": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "photos": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "height",
+                        "html_attributions",
+                        "photo_reference",
+                        "width"
+                      ],
+                      "properties": {
+                        "height": {
+                          "type": "integer"
+                        },
+                        "html_attributions": {
+                          "type": "array",
+                          "additionalItems": true,
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "photo_reference": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              },
+              "place_id": {
+                "type": "string"
+              },
+              "plus_code": {
+                "type": "object",
+                "required": [
+                  "compound_code",
+                  "global_code"
+                ],
+                "properties": {
+                  "compound_code": {
+                    "type": "string"
+                  },
+                  "global_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "price_level": {
+                "type": "integer"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reference": {
+                "type": "string"
+              },
+              "types": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "user_ratings_total": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "type": "object",
+            "required": [
+              "business_status",
+              "formatted_address",
+              "geometry",
+              "icon",
+              "name",
+              "opening_hours",
+              "photos",
+              "place_id",
+              "plus_code",
+              "rating",
+              "reference",
+              "types",
+              "user_ratings_total"
+            ],
+            "properties": {
+              "business_status": {
+                "type": "string"
+              },
+              "formatted_address": {
+                "type": "string"
+              },
+              "geometry": {
+                "type": "object",
+                "required": [
+                  "location",
+                  "viewport"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewport": {
+                    "type": "object",
+                    "required": [
+                      "northeast",
+                      "southwest"
+                    ],
+                    "properties": {
+                      "northeast": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "southwest": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "opening_hours": {
+                "type": "object",
+                "required": [
+                  "open_now"
+                ],
+                "properties": {
+                  "open_now": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "photos": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "height",
+                        "html_attributions",
+                        "photo_reference",
+                        "width"
+                      ],
+                      "properties": {
+                        "height": {
+                          "type": "integer"
+                        },
+                        "html_attributions": {
+                          "type": "array",
+                          "additionalItems": true,
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "photo_reference": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              },
+              "place_id": {
+                "type": "string"
+              },
+              "plus_code": {
+                "type": "object",
+                "required": [
+                  "compound_code",
+                  "global_code"
+                ],
+                "properties": {
+                  "compound_code": {
+                    "type": "string"
+                  },
+                  "global_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reference": {
+                "type": "string"
+              },
+              "types": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "user_ratings_total": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "type": "object",
+            "required": [
+              "business_status",
+              "formatted_address",
+              "geometry",
+              "icon",
+              "name",
+              "photos",
+              "place_id",
+              "plus_code",
+              "price_level",
+              "rating",
+              "reference",
+              "types",
+              "user_ratings_total"
+            ],
+            "properties": {
+              "business_status": {
+                "type": "string"
+              },
+              "formatted_address": {
+                "type": "string"
+              },
+              "geometry": {
+                "type": "object",
+                "required": [
+                  "location",
+                  "viewport"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewport": {
+                    "type": "object",
+                    "required": [
+                      "northeast",
+                      "southwest"
+                    ],
+                    "properties": {
+                      "northeast": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "southwest": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "photos": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "height",
+                        "html_attributions",
+                        "photo_reference",
+                        "width"
+                      ],
+                      "properties": {
+                        "height": {
+                          "type": "integer"
+                        },
+                        "html_attributions": {
+                          "type": "array",
+                          "additionalItems": true,
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "photo_reference": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              },
+              "place_id": {
+                "type": "string"
+              },
+              "plus_code": {
+                "type": "object",
+                "required": [
+                  "compound_code",
+                  "global_code"
+                ],
+                "properties": {
+                  "compound_code": {
+                    "type": "string"
+                  },
+                  "global_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "price_level": {
+                "type": "integer"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reference": {
+                "type": "string"
+              },
+              "types": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "user_ratings_total": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "type": "object",
+            "required": [
+              "business_status",
+              "formatted_address",
+              "geometry",
+              "icon",
+              "name",
+              "photos",
+              "place_id",
+              "plus_code",
+              "rating",
+              "reference",
+              "types",
+              "user_ratings_total"
+            ],
+            "properties": {
+              "business_status": {
+                "type": "string"
+              },
+              "formatted_address": {
+                "type": "string"
+              },
+              "geometry": {
+                "type": "object",
+                "required": [
+                  "location",
+                  "viewport"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewport": {
+                    "type": "object",
+                    "required": [
+                      "northeast",
+                      "southwest"
+                    ],
+                    "properties": {
+                      "northeast": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "southwest": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "photos": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "height",
+                        "html_attributions",
+                        "photo_reference",
+                        "width"
+                      ],
+                      "properties": {
+                        "height": {
+                          "type": "integer"
+                        },
+                        "html_attributions": {
+                          "type": "array",
+                          "additionalItems": true,
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "photo_reference": {
+                          "type": "string"
+                        },
+                        "width": {
+                          "type": "integer"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  ]
+                }
+              },
+              "place_id": {
+                "type": "string"
+              },
+              "plus_code": {
+                "type": "object",
+                "required": [
+                  "compound_code",
+                  "global_code"
+                ],
+                "properties": {
+                  "compound_code": {
+                    "type": "string"
+                  },
+                  "global_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reference": {
+                "type": "string"
+              },
+              "types": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "user_ratings_total": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "type": "object",
+            "required": [
+              "business_status",
+              "formatted_address",
+              "geometry",
+              "icon",
+              "name",
+              "place_id",
+              "plus_code",
+              "rating",
+              "reference",
+              "types",
+              "user_ratings_total"
+            ],
+            "properties": {
+              "business_status": {
+                "type": "string"
+              },
+              "formatted_address": {
+                "type": "string"
+              },
+              "geometry": {
+                "type": "object",
+                "required": [
+                  "location",
+                  "viewport"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "object",
+                    "required": [
+                      "lat",
+                      "lng"
+                    ],
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "viewport": {
+                    "type": "object",
+                    "required": [
+                      "northeast",
+                      "southwest"
+                    ],
+                    "properties": {
+                      "northeast": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "southwest": {
+                        "type": "object",
+                        "required": [
+                          "lat",
+                          "lng"
+                        ],
+                        "properties": {
+                          "lat": {
+                            "type": "number"
+                          },
+                          "lng": {
+                            "type": "number"
+                          }
+                        },
+                        "additionalProperties": true
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              "icon": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "place_id": {
+                "type": "string"
+              },
+              "plus_code": {
+                "type": "object",
+                "required": [
+                  "compound_code",
+                  "global_code"
+                ],
+                "properties": {
+                  "compound_code": {
+                    "type": "string"
+                  },
+                  "global_code": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "rating": {
+                "type": "number"
+              },
+              "reference": {
+                "type": "string"
+              },
+              "types": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "user_ratings_total": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

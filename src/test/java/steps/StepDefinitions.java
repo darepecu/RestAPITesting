@@ -3,59 +3,68 @@ package steps;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import io.restassured.response.Response;
-import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
-import net.thucydides.core.util.EnvironmentVariables;
-
-import static io.restassured.RestAssured.given;
+import io.restassured.module.jsv.JsonSchemaValidator;
+import net.serenitybdd.rest.Ensure;
+import net.serenitybdd.rest.SerenityRest;
 
 public class StepDefinitions {
 
-    private EnvironmentVariables environmentVariables;
+    private String user;
+    private String place;
+    private String placeId;
+    private String operation;
 
-    @Dado("que Juan como usuario desea crear un evento")
-    public void que_Juan_como_usuario_desea_crear_un_evento() {
-        System.out.println("Vamos a Crear un Empleado");
+    RequestController requestController = new RequestController();
+
+    @Dado("que {word} esta en la busqueda de informacion de {word} con {word}")
+    public void query_by_place(String user, String place, String placeID ) {
+        this.user = user;
+        this.place = place;
+        this.placeId = placeID;
+        this.operation = "query_by_place";
     }
 
-    @Cuando("Envíe la información correcta")
-    public void envíe_la_información_correcta() {
+    @Dado("que {word} esta en la busqueda de un {word}")
+    public void query_by_keyword(String user, String place) {
+        this.user = user;
+        this.place = place;
+        this.operation = "query_by_keyword";
+    }
 
-        String webServicesEndpoint = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("base");
+    @Cuando("el\\/ella haga la solicitud de busqueda a Google Maps")
+    public void send_request() {
 
-       test test = new test();
-
-       test.testing(webServicesEndpoint+"create");
-
-        //response.prettyPrint();
+        if (this.operation.equals("query_by_keyword")){
+            requestController.requestQueryKeyword(this.place);
+        }
+        else if (this.operation.equals("query_by_place")){
+            requestController.requestQueryPlace(this.placeId);
+        }
+        else {
+            System.out.println("Favor Validar la Operación enviada");
+        }
 
     }
 
-    @Entonces("se crea el evento")
-    public void se_crea_el_evento() {
-        // Write code here that turns the phrase above into concrete actions
+    @Entonces("se muestra la información básica del lugar")
+    public void basic_data_place() {
+        Ensure.that("El codigo de Respuesta sea un 200.", response -> response.statusCode(200));
 
+        JsonSchemaValidator jsonSchemaValidator = JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/200_basic_data_place.json");
+        Ensure.that("Validando Estrucutra de respuesta con JsonSchema",
+                response -> response.assertThat().body(jsonSchemaValidator));
+
+        SerenityRest.lastResponse().prettyPrint();
     }
 
-    @Dado("que Juan como usuario desea consultar los eventos")
-    public void que_Juan_como_usuario_desea_consultar_los_eventos() {
-        System.out.println("Vamos a Consultar los empleados");
-    }
+    @Entonces("se muestran los resultados de la busqueda")
+    public void query_results() {
+        Ensure.that("El codigo de Respuesta sea un 200.", response -> response.statusCode(200));
 
-    @Cuando("Juan envíe la petición de consulta")
-    public void juan_envíe_la_petición_de_consulta() {
-        String webServicesEndpoint = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("base");
+        JsonSchemaValidator jsonSchemaValidator = JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/200_query_results.json");
+        Ensure.that("Validando Estrucutra de respuesta con JsonSchema",
+                response -> response.assertThat().body(jsonSchemaValidator));
 
-        Response response = given()
-                .log().all()
-                .get(webServicesEndpoint+"employees");
-
-        //response.prettyPrint();
-    }
-
-    @Entonces("se muestan los eventos creados")
-    public void se_muestan_los_eventos_creados() {
-        // Write code here that turns the phrase above into concrete actions
-
+        SerenityRest.lastResponse().prettyPrint();
     }
 }
